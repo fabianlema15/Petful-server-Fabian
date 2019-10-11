@@ -1,26 +1,39 @@
-# Express Boilerplate!
+# Petful API
 
-This is a boilerplate project used for starting new projects!
+Created by: [Fabian Lema](https://github.com/fabianlema15)
 
-## How do set up?
 
-Complete the following steps to start a new project (NEW-PROJECT-NAME):
+## Demo
 
-1. Clone this repository to your local machine `git clone BOILERPLATE-URL NEW-PROJECTS-NAME`
-2. `cd` into the cloned repository
-3. Make a fresh start of the git history for this project with `rm -rf .git && git init`
-4. Install the node dependencies `npm install`
-5. Move the example Environment file to `.env` that will be ignored by git and read by the express server `mv example.env .env`
-6. Edit the contents of the `package.json` to use NEW-PROJECT-NAME instead of `"name": "express-boilerplate",`
+Click on the next link: [Demo](https://petful-fabian.herokuapp.com/api)
 
-## Scripts
+## Technologies
 
-Start the application `npm start`
+>NodeJS  
+Express  
+Postgresql
 
-Start nodemon for the application `npm run dev`
 
-Run the tests in watch mode `npm test`
+## Main URL  
+`https://petful-fabian.herokuapp.com/api`
 
-## Deploying
 
-When your new project is ready for deployment, add a new heroku application with `heroku create`. This will make a new git remote called "heroku" and you can then `npm run deploy` which will push to this remote's master branch.
+## Endpoints
+
+##### CATS
+
+| Resource | Method | Description |
+|-------|------|----------|
+| /api/cats | GET | Return available cat to be adopted |
+|        | DELETE | Remove cat from available cats |
+| /api/cats/next/:id | GET | Return next available cat |
+| /api/cats/prev/:id | GET | Return previous cat of the list |
+
+##### DOGS
+
+| Resource | Method | Description |
+|-------|------|----------|
+| /api/dogs | GET | Return available dog to be adopted |
+|        | DELETE | Remove dog from available dogs |
+| /api/dogs/next/:id | GET | Return next available dog |
+| /api/dogs/prev/:id | GET | Return previous dog of the list |

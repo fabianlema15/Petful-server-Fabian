@@ -10,8 +10,6 @@ app.use(cors({
    origin: CLIENT_ORIGIN
  }));
 
-//app.use(cors())
-
 app.use('/api/cat', catRoute)
 app.use('/api/dog', dogRoute)
 
