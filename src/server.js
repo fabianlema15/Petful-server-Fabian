@@ -1,15 +1,16 @@
+
 const express = require('express');
 const cors = require('cors');
-const {CLIENT_ORIGIN} = require('./config')
+const {PORT, CLIENT_ORIGIN} = require('./config')
 const catRoute = require('./cats/cat-route')
 const dogRoute = require('./dogs/dog-route')
 
 const app = express();
-/*app.use(cors({
+app.use(cors({
    origin: CLIENT_ORIGIN
- }));*/
+ }));
 
-app.use(cors())
+//app.use(cors())
 
 app.use('/api/cat', catRoute)
 app.use('/api/dog', dogRoute)
@@ -31,6 +32,6 @@ app.use(function (err, req, res, next) {
   });
 });
 
-app.listen(8080,()=>{
+app.listen(PORT || 8080,()=>{
   console.log('Serving on 8080');
 });
