@@ -2,6 +2,7 @@ const express = require('express');
 const catRoute = express.Router();
 const jsonParser = express.json();
 const CatService = require('./cat-service');
+const PeopleService = require('../people/people-service');
 
 
 catRoute
@@ -10,6 +11,7 @@ catRoute
     res.json(CatService.getFirst())
   })
   .delete((req, res, next) => {
+    PeopleService.remove()
     res.json(CatService.remove())
   })
 

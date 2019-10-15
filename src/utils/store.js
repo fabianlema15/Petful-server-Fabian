@@ -3,6 +3,8 @@ const Helper = require('./helper')
 
 const catQueue = new Queue();
 const dogQueue = new Queue();
+const peopleQueue = new Queue();
+let peopleCounter = 0;
 
 const enqueueCats = () => {
   Helper.cats.forEach(cat => {
@@ -19,4 +21,4 @@ const enqueueDogs = () => {
 enqueueCats()
 enqueueDogs()
 
-module.exports = {catQueue, dogQueue};
+module.exports = {catQueue, dogQueue, peopleQueue, peopleCounter};

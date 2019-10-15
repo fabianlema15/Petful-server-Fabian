@@ -1,5 +1,5 @@
 const Utils = {
-  queueToArray(Queue){
+  /*queueToArray(Queue){
     const arr = []
     if (Queue.first!== null){
       let tmpQueue = Queue.first;
@@ -10,7 +10,7 @@ const Utils = {
       arr.push(tmpQueue.value)
     }
     return arr
-  }
+  }*/
 }
 
 

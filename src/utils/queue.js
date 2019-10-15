@@ -40,6 +40,29 @@ class Queue {
     }
     return node.value;
   }
+  toArray(){
+    const arr = []
+    if (this.first!== null){
+      let tmpQueue = this.first;
+      while (tmpQueue!== null){
+        arr.push(tmpQueue.value)
+        tmpQueue = tmpQueue.next
+      }
+    }
+    return arr
+  }
+
+  frontOf(id){
+    const arr = []
+    if (this.first!== null){
+      let tmpQueue = this.first;
+      while (tmpQueue!== null && tmpQueue.value.id !== id ){
+        arr.push(tmpQueue.value)
+        tmpQueue = tmpQueue.next
+      }
+    }
+    return arr
+  }
 }
 
 module.exports = Queue

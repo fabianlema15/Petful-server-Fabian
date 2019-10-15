@@ -3,7 +3,7 @@ const Utils = require('../utils/utils')
 
 const CatService = {
   getAll(){
-    return Utils.queueToArray(Store.catQueue)
+    return Store.catQueue.toArray()
   },
 
   getFirst(){

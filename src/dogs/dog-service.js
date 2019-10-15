@@ -3,7 +3,7 @@ const Utils = require('../utils/utils')
 
 const DogService = {
   getAll(){
-    return Utils.queueToArray(Store.dogQueue)
+    return Store.dogQueue.toArray()
   },
 
   getFirst(){

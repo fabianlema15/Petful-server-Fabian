@@ -2,7 +2,7 @@ const express = require('express');
 const dogRoute = express.Router();
 const jsonParser = express.json();
 const DogService = require('./dog-service');
-
+const PeopleService = require('../people/people-service');
 
 dogRoute
   .route('/')
@@ -10,6 +10,7 @@ dogRoute
     res.json(DogService.getFirst())
   })
   .delete((req, res, next) => {
+    PeopleService.remove()
     res.json(DogService.remove())
   })
 

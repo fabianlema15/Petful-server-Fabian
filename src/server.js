@@ -4,6 +4,7 @@ const cors = require('cors');
 const {PORT, CLIENT_ORIGIN} = require('./config')
 const catRoute = require('./cats/cat-route')
 const dogRoute = require('./dogs/dog-route')
+const peopleRoute = require('./people/people-route')
 
 const app = express();
 app.use(cors({
@@ -12,6 +13,7 @@ app.use(cors({
 
 app.use('/api/cat', catRoute)
 app.use('/api/dog', dogRoute)
+app.use('/api/people', peopleRoute)
 
 // Catch-all 404
 app.use(function (req, res, next) {
